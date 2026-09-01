@@ -1,0 +1,18 @@
+<p>AC1: </p>
+<input type="number" [(ngModel)] = "ac1">
+
+<p>AC2: </p>
+<input type="number" [(ngModel)] = "ac2">
+
+<p>AG: </p>
+<input type="number" [(ngModel)] = "ag">
+
+<p>AF: </p>
+<input type="number" [(ngModel)] = "af">
+<br>
+<br>
+
+<button class="btn btn-primary" (click) = clica()>Calcular</button>
+<br>
+
+<p>Média: {{resultado | number: '1.2-2'}} {{aprov}}</p>

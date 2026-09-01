@@ -1,0 +1,26 @@
+<h2>Formulário de Apólice de Seguro Automobilístico</h2>
+
+<p>Nome do segurado:</p>
+<input type="text" [(ngModel)]="nome">
+
+<p>Sexo:</p>
+<select [(ngModel)]="sexo">
+    <option value="">Selecione</option>
+    <option value="masc">Masculino</option>
+    <option value="fem">Feminino</option>
+</select>
+
+<p>Idade:</p>
+<input type="number" [(ngModel)]="idade">
+
+<p>Valor do automóvel:</p>
+<input type="number" [(ngModel)]="valorAutomovel">
+
+<br>
+<br>
+
+<button class="btn btn-primary" (click)="clica()">Calcular Apólice</button>
+<br>
+<br>
+
+<p>Resultado: {{resultado}}</p>
