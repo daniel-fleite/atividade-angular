@@ -1,12 +1,50 @@
-<p>Temperatura ºC: </p>
-<input type="number" [(ngModel)] = "celsius">
-<br>
-<br>
+<div class="container mt-5">
 
-<button class="btn btn-primary" (click) = clica()>Converter</button>
-<br>
-<br>
+  <div class="card shadow-sm mx-auto" style="max-width: 600px;">
 
-<p>Resultado Farenheit: {{resultadoF}}</p>
+    <div class="card-body p-4">
 
-<p>Resultado Kelvin: {{resultadoK}}</p>
+      <h2 class="text-center mb-4">
+        Conversor de Temperatura
+      </h2>
+
+      <div class="mb-3">
+        <label for="celsius" class="form-label">
+          Temperatura em Celsius (°C)
+        </label>
+
+        <input
+          type="number"
+          id="celsius"
+          class="form-control"
+          [(ngModel)]="celsius"
+          placeholder="Digite a temperatura"
+        >
+      </div>
+
+      <button
+        class="btn btn-primary w-100"
+        (click)="clica()"
+      >
+        Converter
+      </button>
+
+      <div class="mt-4">
+
+        <div class="alert alert-info">
+          <strong>Fahrenheit:</strong>
+          {{ resultadoF }}
+        </div>
+
+        <div class="alert alert-info">
+          <strong>Kelvin:</strong>
+          {{ resultadoK }}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

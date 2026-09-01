@@ -1,18 +1,81 @@
-<p>AC1: </p>
-<input type="number" [(ngModel)] = "ac1">
+<div class="container mt-5">
+  <div class="card shadow-sm mx-auto" style="max-width: 600px;">
+    
+    <div class="card-body p-4">
+      <h2 class="card-title text-center mb-4">
+        Cálculo da Média
+      </h2>
 
-<p>AC2: </p>
-<input type="number" [(ngModel)] = "ac2">
+      <div class="row g-3">
 
-<p>AG: </p>
-<input type="number" [(ngModel)] = "ag">
+        <div class="col-md-6">
+          <label for="ac1" class="form-label">AC1</label>
+          <input 
+            type="number"
+            id="ac1"
+            class="form-control"
+            [(ngModel)]="ac1"
+            placeholder="Digite a nota"
+          >
+        </div>
 
-<p>AF: </p>
-<input type="number" [(ngModel)] = "af">
-<br>
-<br>
+        <div class="col-md-6">
+          <label for="ac2" class="form-label">AC2</label>
+          <input 
+            type="number"
+            id="ac2"
+            class="form-control"
+            [(ngModel)]="ac2"
+            placeholder="Digite a nota"
+          >
+        </div>
 
-<button class="btn btn-primary" (click) = clica()>Calcular</button>
-<br>
+        <div class="col-md-6">
+          <label for="ag" class="form-label">AG</label>
+          <input 
+            type="number"
+            id="ag"
+            class="form-control"
+            [(ngModel)]="ag"
+            placeholder="Digite a nota"
+          >
+        </div>
 
-<p>Média: {{resultado | number: '1.2-2'}} {{aprov}}</p>
+        <div class="col-md-6">
+          <label for="af" class="form-label">AF</label>
+          <input 
+            type="number"
+            id="af"
+            class="form-control"
+            [(ngModel)]="af"
+            placeholder="Digite a nota"
+          >
+        </div>
+
+        <div class="col-12 mt-4">
+          <button 
+            class="btn btn-primary w-100"
+            (click)="clica()"
+          >
+            Calcular
+          </button>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-4">
+        <h4>
+          Média: 
+          <span class="fw-bold">
+            {{ resultado | number:'1.2-2' }}
+          </span>
+        </h4>
+
+        <p class="mb-0 fw-semibold">
+          {{ aprov }}
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>

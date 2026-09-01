@@ -1,13 +1,61 @@
-<p>Peso (KG): </p>
-<input type="number" [(ngModel)] = "peso">
-<br>
+<div class="container mt-5">
 
-<p>Altura (m): </p>
-<input type="number" [(ngModel)] = "altura">
-<br>
-<br>
+  <div class="card shadow-sm mx-auto" style="max-width: 600px;">
 
-<button class="btn btn-primary" (click) = clica()>Calcular</button>
-<br>
+    <div class="card-body p-4">
 
-<p>Resultado: {{imc}}</p>
+      <h2 class="text-center mb-4">
+        Calculadora de IMC
+      </h2>
+
+      <div class="mb-3">
+        <label for="peso" class="form-label">
+          Peso (kg)
+        </label>
+
+        <input
+          type="number"
+          id="peso"
+          class="form-control"
+          [(ngModel)]="peso"
+          placeholder="Digite seu peso"
+        >
+      </div>
+
+      <div class="mb-3">
+        <label for="altura" class="form-label">
+          Altura (m)
+        </label>
+
+        <input
+          type="number"
+          id="altura"
+          class="form-control"
+          [(ngModel)]="altura"
+          placeholder="Ex: 1.75"
+          step="0.01"
+        >
+      </div>
+
+      <button
+        class="btn btn-primary w-100"
+        (click)="clica()"
+      >
+        Calcular IMC
+      </button>
+
+      <div class="mt-4 text-center">
+
+        <h5>Resultado</h5>
+
+        <div class="alert alert-info mb-0">
+          {{ imc }}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

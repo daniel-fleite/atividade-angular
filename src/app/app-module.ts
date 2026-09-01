@@ -9,9 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { ApoliceSeguro } from './apolice-seguro/apolice-seguro';
 import { ConversorTemperatura } from './conversor-temperatura/conversor-temperatura';
 import { CalculadoraImc } from './calculadora-imc/calculadora-imc';
+import { Home } from './home/home';
 
 @NgModule({
-  declarations: [App, CalcularMedia, ApoliceSeguro, ConversorTemperatura, CalculadoraImc],
+  declarations: [App, CalcularMedia, ApoliceSeguro, ConversorTemperatura, CalculadoraImc, Home],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],

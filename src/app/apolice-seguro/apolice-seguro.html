@@ -1,26 +1,108 @@
-<h2>Formulário de Apólice de Seguro Automobilístico</h2>
+<div class="container mt-5">
 
-<p>Nome do segurado:</p>
-<input type="text" [(ngModel)]="nome">
+  <div class="card shadow-sm mx-auto" style="max-width: 650px;">
 
-<p>Sexo:</p>
-<select [(ngModel)]="sexo">
-    <option value="">Selecione</option>
-    <option value="masc">Masculino</option>
-    <option value="fem">Feminino</option>
-</select>
+    <div class="card-body p-4">
 
-<p>Idade:</p>
-<input type="number" [(ngModel)]="idade">
+      <h2 class="text-center mb-4">
+        Apólice de Seguro Automobilístico
+      </h2>
 
-<p>Valor do automóvel:</p>
-<input type="number" [(ngModel)]="valorAutomovel">
+      <div class="row g-3">
 
-<br>
-<br>
+        <!-- Nome -->
+        <div class="col-12">
+          <label for="nome" class="form-label">
+            Nome do segurado
+          </label>
 
-<button class="btn btn-primary" (click)="clica()">Calcular Apólice</button>
-<br>
-<br>
+          <input
+            type="text"
+            id="nome"
+            class="form-control"
+            [(ngModel)]="nome"
+            placeholder="Digite o nome do segurado"
+          >
+        </div>
 
-<p>Resultado: {{resultado}}</p>
+        <!-- Sexo -->
+        <div class="col-md-6">
+          <label for="sexo" class="form-label">
+            Sexo
+          </label>
+
+          <select
+            id="sexo"
+            class="form-select"
+            [(ngModel)]="sexo"
+          >
+            <option value="">Selecione</option>
+            <option value="masc">Masculino</option>
+            <option value="fem">Feminino</option>
+          </select>
+        </div>
+
+        <!-- Idade -->
+        <div class="col-md-6">
+          <label for="idade" class="form-label">
+            Idade
+          </label>
+
+          <input
+            type="number"
+            id="idade"
+            class="form-control"
+            [(ngModel)]="idade"
+            placeholder="Digite a idade"
+          >
+        </div>
+
+        <!-- Valor do automóvel -->
+        <div class="col-12">
+          <label for="valorAutomovel" class="form-label">
+            Valor do automóvel
+          </label>
+
+          <div class="input-group">
+            <span class="input-group-text">R$</span>
+
+            <input
+              type="number"
+              id="valorAutomovel"
+              class="form-control"
+              [(ngModel)]="valorAutomovel"
+              placeholder="0,00"
+            >
+          </div>
+        </div>
+
+        <!-- Botão -->
+        <div class="col-12 mt-4">
+          <button
+            class="btn btn-primary w-100"
+            (click)="clica()"
+          >
+            Calcular Apólice
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Resultado -->
+      <div class="mt-4 text-center">
+
+        <h5 class="mb-2">
+          Resultado
+        </h5>
+
+        <div class="alert alert-info mb-0">
+          {{ resultado }}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
