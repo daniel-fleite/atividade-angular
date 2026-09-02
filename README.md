@@ -1,2 +1,11 @@
-Daniel Leite - 250886
-Thiago Feitosa - 251272
+# Atividade Angular
+
+Projeto desenvolvido para prática de conceitos fundamentais do Angular.
+
+## Tecnologias
+
+- Angular
+- TypeScript
+- HTML
+- CSS
+- Bootstrap
